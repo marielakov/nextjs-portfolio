@@ -1,0 +1,3 @@
+Edge Functions: Use for tasks requiring low latency and high performance, such as A/B testing or authentication.
+Serverless Functions: Use for backend logic, such as API endpoints, where execution time might be longer.
+Edge Middleware: Use for tasks that need to manipulate requests and responses before reaching the server, such as rewriting URLs or adding security headers.
