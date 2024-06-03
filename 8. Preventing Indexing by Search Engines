@@ -1,0 +1,45 @@
+Hi X,
+
+To prevent your site from being indexed by search engines, you can add a robots.txt file to the root of your project with the following content:
+
+makefile
+User-agent: *
+Disallow: /
+
+This will instruct search engines not to index any pages of your site.
+
+Best regards,
+Mariela
+
+Decision Making Process
+Understanding the Requirement:
+
+The customer wants to prevent their entire site from being indexed by search engines.
+This is typically done to avoid exposing the site content to search engines for reasons such as it being in development, containing sensitive information, or simply not being ready for public access.
+Choosing the Appropriate Solution:
+
+The robots.txt file is the standard method for controlling how search engines crawl and index a website.
+It is a simple and widely recognized approach that is respected by all major search engines.
+Deciding on the Content of the robots.txt File:
+
+To prevent indexing of the entire site, a Disallow: / directive is used.
+This directive tells all user-agents (search engine bots) not to crawl any pages on the site.
+Creating the robots.txt File:
+
+File Location: The robots.txt file should be placed at the root of the project to ensure it is accessible at https://yourdomain.com/robots.txt.
+File Content: The file content should include directives that instruct all bots to disallow crawling of all pages.
+The content looks like this:
+
+makefile
+Copy code
+User-agent: *
+Disallow: /
+Testing and Validation:
+
+Ensure that the robots.txt file is correctly placed and accessible in the deployment environment.
+Validate the robots.txt file using tools like Google Search Console to confirm it is being read and respected by search engines.
+Customer Communication:
+
+Provide clear instructions on how to create and deploy the robots.txt file.
+Explain what the directives mean and how they achieve the desired effect of preventing indexing.
+Offer additional support if needed for deployment or verification.
