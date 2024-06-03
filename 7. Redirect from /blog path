@@ -1,0 +1,47 @@
+Hi X,
+
+To set up a redirect from the /blog path to https://example.com, you can add the following configuration to your vercel.json file:
+
+{
+  "redirects": [
+    {
+      "source": "/blog",
+      "destination": "https://example.com",
+      "permanent": true
+    }
+  ]
+}
+This configuration will ensure that requests to /blog are permanently redirected to https://example.com.
+
+Best regards,
+Mariela
+
+Decision Making Process
+Understanding the Requirement:
+
+The customer needs to redirect traffic from a specific path (/blog) to an external URL (https://example.com).
+The redirect should be permanent, indicating that the change is intended to last indefinitely and informing search engines of the new URL.
+Choosing the Appropriate Vercel Configuration:
+
+Vercel provides a straightforward way to manage redirects through the vercel.json configuration file.
+This file allows defining routing rules, including redirects, rewrites, and headers, which can be easily managed and deployed with the project.
+Determining the Redirect Type:
+
+A permanent redirect (301) was chosen because it is best for long-term URL changes. This helps in maintaining SEO value and ensures search engines update their indexes to the new URL.
+Creating the vercel.json Configuration:
+
+Structure: The vercel.json file structure is simple and JSON-based, making it easy to read and modify.
+Redirects Key: The configuration uses a redirects key, which is an array of redirect rules.
+Rule Details:
+source: Specifies the path to be redirected (/blog).
+destination: Specifies the new URL to which the traffic should be redirected (https://example.com).
+permanent: Set to true to indicate a 301 permanent redirect.
+Testing and Validation:
+
+Ensure that the JSON syntax is correct and validate the configuration.
+Test the redirect locally or in a staging environment to confirm that it works as expected.
+Customer Communication:
+
+Provide clear and concise instructions to the customer.
+Ensure the customer understands where to place the vercel.json file and the purpose of each configuration key.
+Offer additional support if needed for deployment or further customization.
